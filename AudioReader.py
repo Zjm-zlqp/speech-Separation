@@ -49,13 +49,13 @@ def write_wav(fname, src, sample_rate):
     output:
         None
     '''
-    # 确保src是numpy数组，并且从GPU移动到CPU
+    
     if src.is_cuda:
-        src = src.cpu()  # 将张量从GPU移动到CPU
-    src = src.numpy()  # 将PyTorch张量转换为NumPy数组
-    # 确保文件名有正确的扩展名
+        src = src.cpu() 
+    src = src.numpy()  
+  
     if not fname.lower().endswith('.wav'):
-        fname += '.wav'  # 如果没有扩展名，则添加.wav
+        fname += '.wav' 
     sf.write(fname, src, sample_rate)
 
 class AudioReader(object):
