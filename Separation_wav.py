@@ -9,13 +9,7 @@ from Conv_TasNet import ConvTasNet
 from utils import get_logger
 from option import parse
 import tqdm
-"""
--mix_wav test.wav 混合声音文件的路径
--yaml ./options/train/train.yml 配置文件
--model best.pt 训练模型得到的结果
--gpuid 0 
--save_path ./checkpoint 把结果保存的路径
-"""
+
 
 class Separation():
     def __init__(self, mix_path, yaml_path, model, gpuid):
