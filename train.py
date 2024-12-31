@@ -8,10 +8,6 @@ from DataLoaders import make_dataloader
 from option import parse
 from utils import get_logger
 
-# 数据集：https://catalog.ldc.upenn.edu/LDC93S6A
-# noise数据集：http://wham.whisper.ai/
-# 合成工具：https://www.merl.com/demos/deep-clustering
-# 1：准备好scp数据 2：更改train.yml配置文件 3：指定好参数：-opt ./options/train/train.yml
 
 def main():
     # Reading option
